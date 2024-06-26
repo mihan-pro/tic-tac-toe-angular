@@ -1,0 +1,38 @@
+*{
+  box-sizing: border-box;
+}
+.wrapper{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+}
+
+.container {
+  width: max-content;
+  height: max-content;
+  border: black 1px solid;
+}
+.rows {
+  display: flex;
+  gap: 8px;
+  width: max-content;
+  padding: 4px;
+}
+
+.item {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+  border: black 1px solid;
+}
+
+.resetButton {
+  margin-top: 8px;
+}
