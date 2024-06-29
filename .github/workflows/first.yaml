@@ -14,6 +14,7 @@ jobs:
   job2:
     name: Second job
     runs-on: windows-latest
+    needs: job1
     steps:
       - name: Step1
         uses: actions/checkout@v2
