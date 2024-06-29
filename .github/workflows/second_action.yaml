@@ -1,0 +1,24 @@
+name: Second action
+
+on: push
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: 'date +"Today is %A, %B %d, %Y. The current time is %H:%M:%S."'
+  job2:
+    runs-on: windows-latest
+    steps:
+      - run: 'Get-Date -Format "Today is dddd, MMMM dd, yyyy. The current time is HH:mm:ss."'
+
+  job3:
+    runs-on: macos-latest
+    steps:
+      - run: 'date +"Today is %A, %B %d, %Y. The current time is %H:%M:%S."'
+  job4:
+    runs-on: ubuntu-latest
+    needs: [job1, job2, job3]
+    steps:
+      - run: 'date +"Today is %A, %B %d, %Y. The current time is %H:%M:%S."'
+
