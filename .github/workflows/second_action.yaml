@@ -21,10 +21,6 @@ jobs:
     needs: [job1, job2, job3]
     steps:
       - run: 'date +"Today is %A, %B %d, %Y. The current time is %H:%M:%S."'
-      - name: CodeThreat Scanner
-  # You may pin to the exact commit or the version.
-  # uses: CodeThreat/codethreat-github-action@89ccd1d539dc44a0c57aab95489f633eb93f7052
-        uses: CodeThreat/codethreat-github-action@v1.021 
                 
                 
 
