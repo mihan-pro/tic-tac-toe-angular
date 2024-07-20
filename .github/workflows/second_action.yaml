@@ -6,7 +6,15 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - run: 'date +"Today is %A, %B %d, %Y. The current time is %H:%M:%S."'
+      - name: create_artifact
+        env:
+          ARTIFACT_NAME: first_artifact.txt
+        uses: actions/upload-artifact@v4
+        shell: 'bash',
+        run: echo 'THE FIRST ARTIFACT' > '${{env.ARTIFACT_NAME}}.txt'
+
+      - name: print_date
+        run: 'date +"Today is %A, %B %d, %Y. The current time is %H:%M:%S."'
   job2:
     runs-on: windows-latest
     steps:
