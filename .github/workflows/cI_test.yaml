@@ -13,4 +13,4 @@ jobs:
         with:
           node-version: latest
       - name: test
-        run: 'npm i; ng test' 
+        run: 'npm i; npn run test' 
