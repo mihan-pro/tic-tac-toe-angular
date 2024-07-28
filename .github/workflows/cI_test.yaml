@@ -13,4 +13,4 @@ jobs:
         with:
           node-version: latest
       - name: test
-        run: 'npm i; npm run test' 
+        uses: colbyhill21/angular-full-ci@v1.0
