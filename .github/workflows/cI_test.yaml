@@ -15,9 +15,7 @@ jobs:
       - name: test
         run: 'npm i --silent'
       - name: Install Chrome
-        uses: logikal-io/install-chrome@v1.0.1
-        with:
-          version: '127.0.6533.72-1'
+        uses: browser-actions/setup-chrome@v1.7.2
       - name: test
         run: npm run test 
           
