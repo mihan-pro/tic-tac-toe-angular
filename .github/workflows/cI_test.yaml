@@ -13,4 +13,11 @@ jobs:
         with:
           node-version: latest
       - name: test
-        uses: colbyhill21/angular-full-ci@v1.0
+        run: 'npm i --silent'
+      - name: Install Chrome
+        uses: logikal-io/install-chrome@v1.0.1
+        with:
+          version: 127.0.6533.72-1
+      - name: test
+        run: npm run test 
+          
