@@ -15,7 +15,7 @@ jobs:
       - name: test
         run: 'npm i --silent'
       - name: Install Chrome
-        uses: browser-actions/setup-chrome@v1.7.2
+        run: sudo apt-get install -y libnss3-dev libgconf-2-4
       - name: test
-        run: npm run test 
+        run: npx ng test --watch=false 
           
