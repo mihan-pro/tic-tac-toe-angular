@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: 'date +"Today is %A, %B %d, %Y. The current time is %H:%M:%S."'
-      - uses: 'mihan-pro/test-action@master'
+      - uses: 'mihan-pro/test-action@main'
   job2:
     runs-on: windows-latest
     steps:
